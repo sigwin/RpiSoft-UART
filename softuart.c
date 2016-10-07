@@ -297,7 +297,7 @@ static int __init ModuleInit(void)
 {
 	int result;
 	
-	pGPIO_REGISTER = (struct GPIO_REGISTERS *) __io_address(0x20200000);
+	pGPIO_REGISTER = (struct GPIO_REGISTERS *) __io_address(GPIO_BASE);
 	GPIOFunction(GPIO_TX, 0b001);	//GPIO as output
 	GPIOFunction(GPIO_RX, 0b000);	//GPIO as input
 	
